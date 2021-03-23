@@ -155,7 +155,7 @@ print(most_used_cards)
 # In[8]:
 
 
-lfin_filename = "D:\\soft\\ProjectIgnis\\repositories\\lflists\\0TCG.lflist.conf"
+lfin_filename = "0TCG.lflist.conf"
 
 lfin_file = open(lfin_filename, 'r')
 lines = lfin_file.readlines()
@@ -214,7 +214,7 @@ lfout_filename = "custom.lflist.conf"
 lfout_file = open(lfout_filename, 'w')
 lfout_file.writelines("!Custom\n")
 
-for key in lf_data:
+for key in lf_custom:
     line = key + " " + str(lf_custom.get(key)[0]) + " --" + lf_custom.get(key)[1] + "\n"
     lfout_file.writelines(line)
 
